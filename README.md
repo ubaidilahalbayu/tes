@@ -9,4 +9,33 @@ CREATE TABLE teachers ( id INT AUTO_INCREMENT, name VARCHAR(100), subject VARCHA
 4. buat query yang sama tapi menggunakan store_procedure
 5. buat query input, yang akan memberikan warning error jika ada data yang sama pernah masuk
 ## Jawaban
-1.
+1. select * from students INNER JOIN classes ON students.class_id = classes.id INNER JOIN teachers ON classes.teacher_id = teachers.id;
+2. s
+3. create view siswa AS select * from students; create view kelas AS select * from classes; create view guru AS select * from teachers;
+4. mysql> delimiter //
+   mysql> create procedure selectAllStudents()
+       -> BEGIN
+       -> select * from students;
+       -> END;
+       -> //
+   mysql> delimiter ;
+   mysql> call selectAllStudents();
+
+   mysql> delimiter //
+   mysql> create procedure selectAllClasses()
+       -> BEGIN
+       -> select * from classes;
+       -> END;
+       -> //
+   mysql> delimiter ;
+   mysql> call selectAllClassses();
+
+   mysql> delimiter //
+   mysql> create procedure selectAllTeachers()
+       -> BEGIN
+       -> select * from teachers;
+       -> END;
+       -> //
+   mysql> delimiter ;
+   mysql> call selectAllTeachers();
+5. 
