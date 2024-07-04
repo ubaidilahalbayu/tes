@@ -8,3 +8,5 @@ CREATE TABLE teachers ( id INT AUTO_INCREMENT, name VARCHAR(100), subject VARCHA
 3. buat query view untuk siswa, kelas, dan guru yang mengajar
 4. buat query yang sama tapi menggunakan store_procedure
 5. buat query input, yang akan memberikan warning error jika ada data yang sama pernah masuk
+## Jawaban
+1.
